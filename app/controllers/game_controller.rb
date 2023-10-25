@@ -32,5 +32,5 @@ else
   @outcome = "lost"
 end
 render ({ :template => "game_templates/play_paper"})
-end
+
 end
