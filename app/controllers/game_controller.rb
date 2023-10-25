@@ -13,5 +13,24 @@ class GameController < ApplicationController
     end
     render ({ :template => "game_templates/play_rock"})
   end
+
+  if @computer_move == "scissors"
+    @outcome = "tied"
+  elsif @computer_move == "paper"
+    @outcome = "won"
+  else
+    @outcome = "lost"
+  end
+  render ({ :template => "game_templates/play_scissors"})
 end
 
+if @computer_move == "paper"
+  @outcome = "tied"
+elsif @computer_move == "rock"
+  @outcome = "won"
+else
+  @outcome = "lost"
+end
+render ({ :template => "game_templates/play_paper"})
+end
+end
