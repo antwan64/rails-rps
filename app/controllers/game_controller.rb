@@ -1,4 +1,8 @@
 class GameController < ApplicationController
+
+  def homepage
+    render ({ :template => "home_templates/homepage"})
+  end
   def user_played_rock
     moves = ["rock", "paper", "scissors"]
 
@@ -43,3 +47,4 @@ class GameController < ApplicationController
     end
     render ({ :template => "game_templates/play_paper"})
   end
+end
